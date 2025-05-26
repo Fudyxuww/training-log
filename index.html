@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>训练打卡</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main>
+    <h1 id="title">三阶段 · 每日训练打卡</h1>
+
+    <!-- 阶段选择按钮 -->
+    <section id="stage-controls" class="stage-buttons"></section>
+
+    <!-- 今日任务展示 -->
+    <section id="today-box">
+      <h2>今日训练任务</h2>
+      <div id="task-list"></div>
+      <div class="summary">
+        <p id="kcal-counter">已消耗热量：0 kcal</p>
+        <button onclick="saveToday()">✅ 保存今日打卡记录</button>
+        <button onclick="generateSummary()">📋 生成总结（复制）</button>
+      </div>
+    </section>
+
+    <!-- 本周完成率进度条 -->
+    <section id="weekly-progress">
+      <h2>本周完成情况</h2>
+      <canvas id="progress-ring" width="200" height="200"></canvas>
+      <p id="weekly-count">0 / 7 天</p>
+    </section>
+
+    <!-- 打卡记录日历 -->
+    <section id="calendar-view">
+      <h2>训练打卡日历</h2>
+      <div id="calendar-grid"></div>
+    </section>
+  </main>
+
+  <!-- 外部逻辑和数据 -->
+  <script src="training_data.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

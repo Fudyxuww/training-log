@@ -1,0 +1,99 @@
+body {
+  margin: 0;
+  background: #0f0f0f;
+  color: #d4ff00;
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif;
+  padding: 1em;
+}
+h1, h2 {
+  text-align: center;
+  margin-top: 1em;
+  margin-bottom: 0.6em;
+}
+.stage-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 1em;
+}
+.stage-buttons button {
+  background: #222;
+  color: #d4ff00;
+  border: 1px solid #d4ff00;
+  border-radius: 6px;
+  padding: 0.4em 1em;
+  font-size: 1em;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.stage-buttons button:hover {
+  background: #333;
+}
+.card {
+  background: #1b1b1b;
+  border-radius: 10px;
+  padding: 1em;
+  margin-bottom: 0.8em;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+  transition: transform 0.2s ease;
+}
+.card:hover {
+  transform: scale(1.02);
+}
+.card input[type="checkbox"] {
+  transform: scale(1.4);
+  margin-right: 12px;
+  accent-color: #d4ff00;
+}
+.summary {
+  text-align: center;
+  margin-top: 1em;
+}
+button {
+  background: #d4ff00;
+  color: #000;
+  border: none;
+  border-radius: 8px;
+  padding: 0.6em 1.2em;
+  margin: 0.5em;
+  font-weight: bold;
+  cursor: pointer;
+}
+#calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 8px;
+  margin-top: 1em;
+  padding: 0 1em;
+}
+.calendar-cell {
+  width: 100%;
+  padding-top: 100%;
+  position: relative;
+  border-radius: 4px;
+  background: #333;
+}
+.calendar-cell.done {
+  background: #d4ff00;
+}
+.calendar-cell.missed {
+  background: #555;
+}
+.calendar-cell.today {
+  border: 2px solid #d4ff00;
+}
+.calendar-cell span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 12px;
+  color: #000;
+}
+#weekly-progress {
+  text-align: center;
+  margin-top: 2em;
+}
+canvas#progress-ring {
+  margin-top: 1em;
+}
